@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+
+  <ParametersGroup name="Spike Parameters">
+    <StringListParameter name="spike files" value="11101_1.isk"/>
+    <IntegerParameter name="number of parts" value="4"/>  
+    <IntegerParameter name="number of trials" value="0"/>
+  </ParametersGroup>
+
+  <ParametersGroup name="Annealing Parameters">
+    <IntegerParameter name="max annealing iterations" value="1"/>
+    <DoubleParameter name="start temperature" value="0.01"/>
+    <DoubleParameter name="stop temperature" value="1.0e-5"/>
+    <DoubleParameter name="down temperature factor" value=".95"/>
+    <DoubleParameter name="up temperature factor" value="5.0"/>
+    <DoubleParameter name="function tolerance" value="5.0e-5"/>
+    <IntegerParameter name="updateFactor" value="100"/>
+  </ParametersGroup>
+  
+  <ParametersGroup name="Movie Parameters">
+    <StringListParameter name="movie files" value="walk1_ieee_128x128x16384.raw"/>
+    <EnumeratorParameter name="data type" value="1" values="byte:1:double:2" />
+    
+    <IntegerParameter name="width" value="128"/>
+    <!-- smallest legal value is one -->
+    <IntegerParameter name="x offset" value="5"/>
+    <IntegerParameter name="sta width" value="64"/>
+    <IntegerParameter name="x downsample" value="4"/>
+	
+    <IntegerParameter name="height" value="128"/>
+    <!-- smallest legal value is one -->
+    <IntegerParameter name="y offset" value="5"/>
+    <IntegerParameter name="sta height" value="64"/>
+    <IntegerParameter name="y downsample" value="4"/>
+    
+    <IntegerParameter name="sta duration" value="3"/>
+    <!-- smallest legal value is zero -->
+    <IntegerParameter name="skipped sta frames" value="0"/>
+    <IntegerListParameter name="number of bins" value="5,10,15"/>
+    <IntegerListParameter name="number of iterations" value="500,500,500"/>
+  </ParametersGroup>
+  
+  <ParametersGroup name="Output Parameters">
+	<StringParameter name="prefix" value="V1model"/>
+  </ParametersGroup>
+  
+
+</Configuration>
+
